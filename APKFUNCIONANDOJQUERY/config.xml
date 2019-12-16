@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		id        = "com.phonegap.hercules4"
+		versionCode="4.0.2"
+		version   = "2.0.0">
+		<name>Hercules 4.0.2</name>
+		<description>Version android para el modulo de logistica de la aplicación Hercules 4.0.2</description>
+		<author href="www.integrapps.com" email="hernando.gaitan@integrapps.com">Integrapps</author>
+		 <content src="index.html" />
+		<preference name="Fullscreen" value="true"/> 
+	  <preference name="HideKeyboardFormAccessoryBar" value="false"/>
+												
+    <access origin="*" subdomains="true" />
+	<allow-intent href="*" />
+	<allow-navigation href="*" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+		 <!-- Define app icon for each platform. -->
+    <icon src="www/icon.png" />
+    <icon src="www/res/icon/android/ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="www/res/icon/android/mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="www/res/icon/android/hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="www/res/icon/android/xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+	 <icon src="www/res/icon/android/xxhdpi.png"  gap:platform="android"    gap:qualifier="xxhdpi" />
+	  <icon src="www/res/icon/android/xxxhdpi.png"  gap:platform="android"    gap:qualifier="xxxhdpi" />
+
+    <!-- Define app splash screen for each platform. -->
+    <gap:splash src="www/splash.png" />
+	  <!--  Portrait  -->
+	<splash density="port-ldpi" src="www/res/screen/android/splash-port-ldpi.png"/>
+	<splash density="port-mdpi" src="www/res/screen/android/splash-port-mdpi.png"/>
+	<splash density="port-hdpi" src="www/res/screen/android/splash-port-hdpi.png"/>
+	<splash density="port-xhdpi" src="www/res/screen/android/splash-port-xhdpi.png"/>
+	<splash density="port-xxhdpi" src="www/res/screen/android/splash-port-xxhdpi.png"/>
+	<splash density="port-xxxhdpi" src="www/res/screen/android/splash-port-xxxhdpi.png"/>
+	<splash density="land-ldpi" src="www/res/screen/android/splash-land-ldpi.png"/>
+    <splash density="land-mdpi" src="www/res/screen/android/splash-land-mdpi.png"/>
+    <splash density="land-hdpi" src="www/res/screen/android/splash-land-hdpi.png"/>
+    <splash density="land-xhdpi" src="www/res/screen/android/splash-land-xhdpi.png"/>
+    <splash density="land-xxhdpi" src="www/res/screen/android/splash-land-xxhdpi.png"/>
+    <splash density="land-xxxhdpi" src="www/res/screen/android/splash-land-xxxhdpi.png"/>
+		</widget>

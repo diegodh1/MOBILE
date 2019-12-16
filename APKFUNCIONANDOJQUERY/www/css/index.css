@@ -1,0 +1,32 @@
+.fondogris{ background: #CACFD2;}
+.fondored{ background: #D73E1F !important;}
+.white-text{ color:white !important;}
+.right{ text-align: right !important;}
+.left{ float: left !important;}
+.pt-1{ padding-top: 10px !important;}
+.informacion{color: chocolate !important; font-size:  1.2em !important;}
+.inputnumero{    font-size: 2em !important;color: chocolate !important;}
+h1{font-size: 1.2em !important;color: cadetblue !important;}
+h2{font-size: 1em !important;color: #686868 !important;}
+label,.ui-grid-solo{font-size: 25px !important;color: darkblue;}
+.ui-panel-page-container-themed .ui-page-active,a.ui-btn.ui-btn-icon-right.ui-icon-delete,a.ui-btn.ui-btn-icon-right.ui-icon-carat-r{ background: whitesmoke !important; text-shadow: none;}
+.ui-btn,input {font-size: 15px !important;color: #059 !important;}
+a{font-size: 1.2em !important;color: grey !important; background: #ddd;}
+@media ( min-width: 40em ) {
+	/* Show the table header rows and set all cells to display: table-cell */
+	.my-custom-breakpoint td,
+	.my-custom-breakpoint th,
+	.my-custom-breakpoint tbody th,
+	.my-custom-breakpoint tbody td,
+	.my-custom-breakpoint thead td,
+	.my-custom-breakpoint thead th {
+		display: table-cell;
+		margin: 0;
+	}
+	/* Hide the labels in each cell */
+	.my-custom-breakpoint td .ui-table-cell-label,
+	.my-custom-breakpoint th .ui-table-cell-label {
+		display: none;
+	}
+}
+
