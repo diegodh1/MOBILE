@@ -24,17 +24,22 @@
 </head>
 <body ng-controller="inicio">
 <div data-role="page" class="jqm-demos ui-responsive-panel" id="inicio" data-title="Panel Principal" data-url="panel-responsive-page1">
- <div data-role="header">
+ <div data-role="header" ng-show="showMontacarga == '0'">
         <h1>Men&uacute; Principal</h1>
         <a href="#nav-panel" data-icon="bars">Men&uacute;</a>
         <a href="#iniciasesion" data-icon="gear">Login</a>
     </div><!-- /header -->
      <div role="main" class="ui-content">
+		 <br>
         <div class="ui-grid-solo">
 			<b>Organizaci&oacute;n: <span class="black-text">{{nombreorg}}</span></b>
 		</div>
 		<div class="ui-grid-solo">
 			<b>Bienvenido, <span class="black-text">{{nombreusuario}}</span></b>
+		</div>
+		<br>
+		<div class="center-button ui-grid-solo" ng-show="showMontacarga == '1'">
+			<a href="#movimientoCanastilla" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right"><span style="color: red;">COMENZAR MONTACARGA</a>
 		</div>
      </div>
 <div  data-role="panel" data-display="push" data-theme="b" id="nav-panel" ng-show ="nombreorg !== ''">
@@ -66,6 +71,85 @@
 		<h4>copyright &#169; 2020 Integrapps</h4>
 	</div><!-- /footer -->
 </div>
+
+	<!-- ******************* MOVIMIENTO CANASTILLA *************************************** -->
+	<div data-role="page" id="movimientoCanastilla">
+		<div data-role="header">
+			<div class="ui-grid-solo ui-shadow">
+				<h1 style="color: black !important; text-align: center;">Movimiento
+					de Canastilla</h1>
+			</div>
+		</div>
+		<!-- /header -->
+
+		<div role="main" class="ui-content"
+			style="background-color: white !important;">
+			<a href="#inicio"
+				class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left"
+				style="background-color: white !important;">Regresar</a> <br> <label
+				for="canastillaId"><span style="color: black">MODULO
+					ID:</span></label> <input type="text" name="text-1" id="canastillaId"
+				ng-model="idCanastila" ng-change="getInfoCanastilla();">
+			<h3 style="color: black !important; text-align: center;">INFORMACIÓN
+				MODULO</h3>
+			<table data-role="table" id="tableInfoCanastilla" 
+			class="ui-responsive table-stroke"
+		   data-mode="reflow" border="1">
+				<thead>
+					<tr>
+						<th data-priority="1">Organización</th>
+						<th data-priority="2">Canastilla</th>
+						<th data-priority="3">Bodega
+							Origen</th>
+						<th data-priority="4">Bodega
+							Destino</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in canastillaObject">
+						<th>{{x.organizacionId}}</th>
+						<td>{{x.canastillaId}}</td>
+						<td>{{x.bodegaOrigenId}}</td>
+						<td>{{x.bodegaDestinoId}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br> <label for="bodegaId"><span style="color: black">BODEGA
+					MODULO ID:</span></label> <input type="text" name="text-1" id="bodegaId"
+				ng-model="idBodegaDestino" ng-change="entregarCanastilla();">
+			<br>
+			<h3 style="color: black !important; text-align: center;">MODULOS
+				PENDIENTES</h3>
+			<table data-role="table" id="tablePendientes" 
+			class="ui-responsive table-stroke"
+		   data-mode="reflow" border="1">
+				<thead>
+					<tr>
+						<th data-priority="1">Organización</th>
+						<th data-priority="2">Canastilla</th>
+						<th data-priority="3">Bodega
+							Origen</th>
+						<th data-priority="4">Bodega
+							Destino</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in canastillaPendiente">
+						<th>{{x.organizacionId}}</th>
+						<td>{{x.canastillaId}}</td>
+						<td>{{x.bodegaOrigenId}}</td>
+						<td>{{x.bodegaDestinoId}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+		</div>
+	</div>
+
+	<!-- /page -->
+
+
  <div data-role="page" id="iniciasesion">
 <div data-role="header">
 		<h1>Inicio de Sesi&oacute;n</h1>
